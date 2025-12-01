@@ -69,7 +69,7 @@
                 ┃ ┗ ...
                 ┃
                 ┣ src           # The source-code folder
-                ┃ ┗ ...
+                ┃ ┗ main.ts    # The main entry point file
                 ┃
                 ┣ test          # The tests folder
                 ┃ ┗ ...
@@ -78,12 +78,6 @@
 
                 # You can safely hide/ignore the rest of files.
                 ```
-
-                - ##### `src`
-
-                    ```bash
-                    ┗ main.ts   # The main entry point
-                    ```
 
 <!-- ╚═════════════════════════════════════════════════════════════════╝ -->
 
