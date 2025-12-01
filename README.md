@@ -74,7 +74,7 @@
                 ┣ test          # The tests folder
                 ┃ ┗ ...
                 ┃
-                ┣ .space        # The space configuration file
+                ┗ .space        # The space configuration file
 
                 # You can safely hide/ignore the rest of files.
                 ```
