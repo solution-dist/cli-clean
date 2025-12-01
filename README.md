@@ -13,11 +13,7 @@
     </a>
     <a href="{{homepage}}"> <img src="https://img.shields.io/badge/{{tag-badge}}-black"/> </a>
 </div>
-
-<div align="center">
-    <img src="./assets/img/line.png" alt="line" style="display: block; margin-top:20px;margin-bottom:20px;width:500px;"/>
-    <br>
-</div>
+<br>
 
 <!-- ╚═════════════════════════════════════════════════════════════════╝ -->
 
@@ -27,42 +23,68 @@
 
 - ## Quick Start 🔥
 
-    - ### Pre
+    > _**The simplest, fastest, most organized and stable way to build command line applications.**_
 
-        ```bash
-        # clone
-        space init <name> --type cli
-
-        # setup
-        cd <name>       # enter the project dir
-        space install   # install the dependencies if exists
-
-        # manage
-        space test      # run the tests
-        space build     # create `/dist/..`
-        space start     # build and start `/dist/main.js`
-        space publish   # to publish on `npm`
-        ```
+    > _This repository uses [`@je-es/cli`](https://github.com/je-es/cli) and managed by [`space`](https://github.com//solution-lib/space)._
 
     - ### Usage
 
-        ```bash
-        # use your app via `space` (locally)
-        space start create MyApp --type website
-        ```
+        - #### Setup
 
-        ```bash
-        # link globally
-        space link
+            > install [`space`](https://github.com/solution-lib/space) first.
 
-        # then
-        {{name}} create MyApp --type website
-        ```
+            - ##### Create
 
-        ```bash
-        # install your app via `space` (if published on `npm`)
-        space i {{tag}}
-        ```
+                ```bash
+                > space init <name> -t cli    # This will clone this repo and make some changes to suit your app.
+                > cd <name>                   # Go to the project directory
+                > space install               # Install the dependencies
+                ```
+
+            - ##### Manage
+
+                ```bash
+                > space build         # To build your app
+                > space test          # To test  your app
+                > space start <args>  # To start your app
+                ```
+
+                ```bash
+                # example
+                 > space start create MyApp -t web
+
+                # output
+                  Creating MyApp as web
+                ```
+
+        - #### Structure
+
+            - ##### Root
+
+                ```bash
+                ┣ assets        # The assets folder
+                ┃ ┗ ...
+                ┃
+                ┣ dist          # The distribution folder
+                ┃ ┗ ...
+                ┃
+                ┣ src           # The source-code folder
+                ┃ ┗ ...
+                ┃
+                ┣ test          # The tests folder
+                ┃ ┗ ...
+                ┃
+                ┣ .env          # The environment configuration file
+                ┣ .space        # The space configuration file
+
+                # You can safely hide/ignore the rest of files.
+                ```
+
+                - ##### `src`
+
+                    ```bash
+                    ┗ main.ts   # The main entry point
+                    ```
 
 <!-- ╚═════════════════════════════════════════════════════════════════╝ -->
 
