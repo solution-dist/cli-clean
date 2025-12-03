@@ -29,60 +29,58 @@
 
     > _This repository uses [`@je-es/cli`](https://github.com/je-es/cli) and managed by [`space`](https://github.com//solution-lib/space)._
 
-    - ### Usage
+    - #### Setup
 
-        - #### Setup
+        > install [`space`](https://github.com/solution-lib/space) first.
 
-            > install [`space`](https://github.com/solution-lib/space) first.
+        - ##### Create
 
-            - ##### Create
+            ```bash
+            > space init <name> -t cli    # This will clone this repo and make some changes to suit your app.
+            > cd <name>                   # Go to the project directory
+            > space install               # Install the dependencies
+            ```
 
-                ```bash
-                > space init <name> -t cli    # This will clone this repo and make some changes to suit your app.
-                > cd <name>                   # Go to the project directory
-                > space install               # Install the dependencies
-                ```
+        - ##### Manage
 
-            - ##### Manage
+            ```bash
+            > space build         # To build your app
+            > space test          # To test  your app
+            > space start <args>  # To start your app
+            ```
 
-                ```bash
-                > space build         # To build your app
-                > space test          # To test  your app
-                > space start <args>  # To start your app
-                ```
+            ```bash
+            # example
+             > space start create MyApp -t web
 
-                ```bash
-                # example
-                 > space start create MyApp -t web
+            # output
+              Creating MyApp as web
+            ```
 
-                # output
-                  Creating MyApp as web
-                ```
+      <div align="center"> <img src="./assets/img/line.png" alt="line" style="display: block; margin-top:20px;margin-bottom:20px;width:500px;"/> <br> </div>
 
-          <div align="center"> <img src="./assets/img/line.png" alt="line" style="display: block; margin-top:20px;margin-bottom:20px;width:500px;"/> <br> </div>
+    - #### Structure
 
-        - #### Structure
+        - ##### Root
 
-            - ##### Root
+            ```bash
+            ┣ assets
+            ┃ ┗ ...            #  (logo.png, ..)
+            ┃
+            ┣ dist
+            ┃ ┗ ...            # (main.js, main.js.map, ..)
+            ┃
+            ┣ src
+            ┃ ┗ main.ts        # Main entry point
+            ┃
+            ┣ test
+            ┃ ┗ main.test.ts   # Main test file
+            ┃
+            ┣ .env              # Environment configuration file
+            ┗ .space            # Space configuration file
 
-                ```bash
-                ┣ assets
-                ┃ ┗ ...            #  (logo.png, ..)
-                ┃
-                ┣ dist
-                ┃ ┗ ...            # (main.js, main.js.map, ..)
-                ┃
-                ┣ src
-                ┃ ┗ main.ts        # Main entry point
-                ┃
-                ┣ test
-                ┃ ┗ main.test.ts   # Main test file
-                ┃
-                ┣ .env              # Environment configuration file
-                ┗ .space            # Space configuration file
-
-                # You can safely hide/ignore the rest of files.
-                ```
+            # You can safely hide/ignore the rest of files.
+            ```
 
 <!-- ╚═════════════════════════════════════════════════════════════════╝ -->
 
